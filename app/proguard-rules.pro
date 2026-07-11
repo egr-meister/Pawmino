@@ -23,7 +23,6 @@
 -keepclasseswithmembers class kotlinx.serialization.json.** {
     kotlinx.serialization.KSerializer serializer(...);
 }
--dontnotoptimize
 
 # --- Kotlin metadata ---
 -keep class kotlin.Metadata { *; }
