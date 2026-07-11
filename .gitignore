@@ -1,0 +1,42 @@
+# Built application files
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log Files
+*.log
+
+# Android Studio / IntelliJ
+*.iml
+.idea/
+.DS_Store
+
+# Keystore and signing secrets — NEVER commit these
+*.jks
+*.keystore
+*.p12
+keystore.properties
+release-key.*
+pawmino-release-key.*
+
+# Keep the wrapper scripts/properties but do not commit downloaded dists
+gradle/wrapper/dists/

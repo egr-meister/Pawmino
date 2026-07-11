@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pawmino</string>
+    <string name="care_disclaimer">Pawmino is a manual pet care routine organizer. Tasks, schedules, notes, and completion records are entered by the user. The app does not provide veterinary advice, diagnosis, treatment, emergency guidance, or medical recommendations.</string>
+    <string name="emergency_disclaimer">If your pet appears unwell or needs urgent help, contact a qualified veterinarian or local emergency veterinary service. Pawmino is not an emergency or medical application.</string>
+</resources>

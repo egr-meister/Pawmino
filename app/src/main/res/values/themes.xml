@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. Compose provides the actual UI theme (Material 3);
+         this Android theme only controls the pre-Compose window + splash. -->
+    <style name="Theme.Pawmino" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/app_background</item>
+        <item name="android:statusBarColor">@color/warm_cream</item>
+        <item name="android:navigationBarColor">@color/app_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <!-- Static splash: cream background with the segmented care-loop logo centered.
+         No animation, no mascot, no photo. -->
+    <style name="Theme.Pawmino.Splash" parent="Theme.Pawmino">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
+</resources>

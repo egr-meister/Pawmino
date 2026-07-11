@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pawmino adaptive icon foreground: a segmented daily care loop with a subtle
+     paw-shaped center mark. No animal photo, no medical cross, no text. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Four care-loop segments -->
+    <path
+        android:pathData="M83.54,59.21 A30,30 0 0 1 59.21,83.54"
+        android:strokeColor="#E9866A"
+        android:strokeWidth="7"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M48.79,83.54 A30,30 0 0 1 24.46,59.21"
+        android:strokeColor="#5D8FD9"
+        android:strokeWidth="7"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M24.46,48.79 A30,30 0 0 1 48.79,24.46"
+        android:strokeColor="#9B83CE"
+        android:strokeWidth="7"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M59.21,24.46 A30,30 0 0 1 83.54,48.79"
+        android:strokeColor="#E6A742"
+        android:strokeWidth="7"
+        android:strokeLineCap="round" />
+
+    <!-- Paw center mark -->
+    <path
+        android:pathData="M47,59 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0"
+        android:fillColor="#1E7E75" />
+    <path
+        android:pathData="M43.2,51 a2.8,2.8 0 1,0 5.6,0 a2.8,2.8 0 1,0 -5.6,0"
+        android:fillColor="#1E7E75" />
+    <path
+        android:pathData="M48.2,48 a2.8,2.8 0 1,0 5.6,0 a2.8,2.8 0 1,0 -5.6,0"
+        android:fillColor="#1E7E75" />
+    <path
+        android:pathData="M54.2,48 a2.8,2.8 0 1,0 5.6,0 a2.8,2.8 0 1,0 -5.6,0"
+        android:fillColor="#1E7E75" />
+    <path
+        android:pathData="M59.2,51 a2.8,2.8 0 1,0 5.6,0 a2.8,2.8 0 1,0 -5.6,0"
+        android:fillColor="#1E7E75" />
+</vector>

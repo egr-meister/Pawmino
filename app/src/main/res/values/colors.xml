@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="paw_teal">#2FA89A</color>
+    <color name="deep_teal">#1E7E75</color>
+    <color name="soft_mint">#DDF4EF</color>
+    <color name="warm_cream">#FFF8EC</color>
+    <color name="app_background">#F6F4EF</color>
+    <color name="deep_ink">#25282B</color>
+
+    <color name="cat_feeding">#E9866A</color>
+    <color name="cat_walk">#5D8FD9</color>
+    <color name="cat_grooming">#9B83CE</color>
+    <color name="cat_play">#E6A742</color>
+
+    <color name="ic_launcher_background">#FFF8EC</color>
+</resources>
