@@ -15,7 +15,8 @@ jobs:
 
     env:
       # build.gradle.kts reads these to configure signingConfigs.release.
-      ANDROID_KEYSTORE_FILE: ${{ runner.temp }}/pawmino-release.p12
+      # ANDROID_KEYSTORE_FILE is set in the "Decode release keystore" step (the
+      # runner.temp path is only available inside steps, not in job-level env).
       ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
       ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
       ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
@@ -53,7 +54,10 @@ jobs:
             echo "::error::ANDROID_KEYSTORE_BASE64 secret is not set."
             exit 1
           fi
-          echo "$ANDROID_KEYSTORE_BASE64" | base64 --decode > "$ANDROID_KEYSTORE_FILE"
+          KEYSTORE_PATH="$RUNNER_TEMP/pawmino-release.p12"
+          echo "$ANDROID_KEYSTORE_BASE64" | base64 --decode > "$KEYSTORE_PATH"
+          # Expose the path to later steps (build.gradle.kts reads ANDROID_KEYSTORE_FILE).
+          echo "ANDROID_KEYSTORE_FILE=$KEYSTORE_PATH" >> "$GITHUB_ENV"
           echo "Keystore decoded to a temporary file."
 
       - name: Build signed release APK
