@@ -33,9 +33,14 @@ jobs:
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          # Pin to the runner's preinstalled cmdline-tools (licenses already accepted).
+          # "latest" pulls newer tools that bundle extra, un-accepted licenses and fail in CI.
+          cmdline-tools-version: 12.0
 
       - name: Install SDK Platform 36 and Build Tools 36.0.0
         run: |
+          yes | sdkmanager --licenses >/dev/null || true
           yes | sdkmanager "platforms;android-36" "build-tools;36.0.0" >/dev/null
 
       - name: Set up Gradle (with cache)
