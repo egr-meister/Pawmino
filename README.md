@@ -156,13 +156,13 @@ Kotlin, Jetpack Compose, Material 3, Navigation Compose, Android ViewModel, Kotl
 
 **Requirements**
 
-- Android Studio (a recent stable release compatible with Android Gradle Plugin 8.6 and API 35).
+- Android Studio (a recent stable release compatible with Android Gradle Plugin 8.9 and API 36).
 - **JDK 17.**
-- Android SDK **Platform 35** and **Build Tools 35.0.0**.
+- Android SDK **Platform 36** and **Build Tools 36.0.0**.
 
 **Configuration highlights**
 
-- `compileSdk = 35`, `targetSdk = 35`, `minSdk = 24`.
+- `compileSdk = 36`, `targetSdk = 36`, `minSdk = 24`.
 - Portrait-locked, edge-to-edge with visible system bars.
 - Core-library desugaring enabled for `java.time`.
 - **16 KB memory page-size compatibility:** because the app uses only Kotlin/Compose/DataStore and ships **no native third-party binaries**, the resulting AAB is compatible with Android 15+ 16 KB page sizes. Still verify the final bundle before release.
@@ -170,7 +170,7 @@ Kotlin, Jetpack Compose, Material 3, Navigation Compose, Android ViewModel, Kotl
 **Open in Android Studio**
 
 1. `File → Open` and select the project root.
-2. Let Gradle sync. Android Studio generates the Gradle wrapper JAR automatically if it is missing. (You can also run `gradle wrapper --gradle-version 8.9` with a locally installed Gradle.)
+2. Let Gradle sync. Android Studio generates the Gradle wrapper JAR automatically if it is missing. (You can also run `gradle wrapper --gradle-version 8.11.1` with a locally installed Gradle.)
 
 **Build a debug APK**
 
@@ -238,7 +238,7 @@ The workflow `.github/workflows/android-build.yml`:
 
 1. Runs on push to `main` and supports `workflow_dispatch`.
 2. Checks out the repository and sets up **JDK 17**.
-3. Installs Android **SDK Platform 35** and **Build Tools 35.0.0**.
+3. Installs Android **SDK Platform 36** and **Build Tools 36.0.0**.
 4. Configures Gradle with caching and generates the Gradle wrapper.
 5. Decodes `ANDROID_KEYSTORE_BASE64` into a temporary PKCS12 file and exposes signing values only as environment variables.
 6. Builds the **signed release APK** and **signed release AAB**.
@@ -306,7 +306,7 @@ When inspecting `adb logcat`, watch for `ClassNotFoundException`, `NoSuchMethodE
 - Reset selected-pet history; reset all data; relaunch.
 - Launch in airplane mode and confirm full functionality.
 - Confirm no `INTERNET` permission, no runtime permission dialogs, no camera control, and no notification behavior.
-- Verify the release certificate, the AAB output, API 35 configuration, and 16 KB page-size compatibility.
+- Verify the release certificate, the AAB output, API 36 configuration, and 16 KB page-size compatibility.
 
 ## Data reset behavior
 
